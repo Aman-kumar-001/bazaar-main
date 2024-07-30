@@ -1,0 +1,48 @@
+@import "../css-config/mixins.scss";
+
+.list-container {
+
+    h1 {
+        margin: 20px;
+    }
+
+    .plist-filter-container {
+        display: flex;
+        justify-content: space-between;
+
+        .list-filter {
+            width: 0px 20px;
+            display: flex;
+            flex-direction: column;
+
+            @include md {
+                flex-direction: row;
+                margin: 20px;
+            }
+
+            h2 {
+                margin-right: 0px;
+
+                @include md {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-top: 5px;
+                    margin-right: 20px;
+                }
+            }
+
+
+            select {
+                // margin: 10px 0px;
+                // width: 80px;
+                // height: 50px;
+
+                @include md {
+                    padding: 10px;
+                    margin-right: 20px;
+                }
+            }
+
+        }
+    }
+}

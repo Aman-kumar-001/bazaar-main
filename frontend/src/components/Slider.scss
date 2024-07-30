@@ -1,0 +1,256 @@
+@import"../css-config/mixins.scss";
+
+
+.containers {
+    display: none;
+
+    @include md {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .arrow1 {
+        width: 50px;
+        height: 50px;
+        background: #e3e0e0;
+        // background-color: #fff7f7;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
+        opacity: 0.5;
+        z-index: 2;
+        // padding: 5px;
+    }
+
+    .arrow2 {
+        width: 50px;
+        height: 50px;
+        background: #e3e0e0; // background-color: #fff7f7;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
+        opacity: 0.5;
+        z-index: 2;
+
+    }
+
+    .wrappers {
+        height: 100%;
+        display: flex;
+        transition: all 1.5s ease;
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+
+            // background-color: #${(props) => props.bg};
+            .img-container {
+                height: 100%;
+                flex: 1;
+
+                img {
+                    height: 80%;
+                }
+            }
+
+            .info-container {
+                flex: 1;
+                padding: 50px;
+
+                h3 {
+                    font-size: 70px;
+                }
+
+                p {
+                    margin: 50px 0px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    letter-spacing: 3px;
+                }
+
+                button {
+                    padding: 10px;
+                    font-size: 20px;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// .hero-banner {
+//     position: relative;
+//     background: #fff7f7;
+
+//     @include md {
+//         height: calc(100vh - 400px);
+//     }
+
+//     @include lg {
+//         height: calc(100vh - 80px);
+//     }
+
+//     .content {
+//         height: 100%;
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
+//         flex-direction: column-reverse;
+//         max-width: calc(100% - 20px);
+//         margin: 0 auto;
+//         position: relative;
+
+//         @include md {
+//             flex-direction: row;
+//             max-width: 1100px;
+//             justify-content: space-between;
+//         }
+
+//         .banner-img {
+//             position: relative;
+//             z-index: 9;
+//             width: 250px;
+//             margin-bottom: 20px;
+//             height: 250px;
+
+//             @include md {
+//                 height: 400px;
+//                 width: 300px;
+//                 margin-right: 20px;
+//                 margin-top: 20px;
+//                 margin-bottom: 0;
+//             }
+
+//             @include lg {
+//                 height: 400px;
+//                 width: 350px;
+//                 margin-right: 60px;
+//                 margin-top: 30px;
+//                 margin-bottom: 0;
+//             }
+
+//             @include xxl {
+//                 height: 660px;
+//                 width: 600px;
+//                 margin-right: 0;
+//                 margin-top: 0;
+
+//             }
+//         }
+
+//         .text-content {
+//             color: black;
+//             // text-align: center;
+//             display: flex;
+//             flex-direction: column;
+//             // align-items: center;
+
+//             @include md {
+//                 position: relative;
+//                 left: 20px;
+//                 top: 10%;
+//                 transform: translateY(-20px);
+//             }
+
+//             @include lg {
+//                 position: relative;
+//                 left: 50px;
+//                 top: 10%;
+//                 transform: translateY(-80px);
+//             }
+
+//             @include xl {
+//                 top: 10%;
+//             }
+
+//             @include xxl {
+//                 top: 10%;
+//                 left: -0;
+//             }
+
+//             h1 {
+//                 font-size: 60px;
+//                 font-weight: 700;
+//                 line-height: 1;
+//                 margin-bottom: 20px;
+//                 display: flex;
+//                 flex-direction: column;
+
+//                 @include md {
+//                     font-size: 60px;
+//                     font-weight: 500;
+//                 }
+
+//                 @include lg {
+//                     font-size: 80px;
+//                     font-weight: 500;
+//                 }
+
+//             }
+
+//             p {
+//                 max-width: 300px;
+//                 font-size: 14px;
+//                 line-height: 20px;
+//                 margin-bottom: 20px;
+//                 color: black;
+
+//                 @include md {
+//                     max-width: 400px;
+//                     font-size: 18px;
+//                     line-height: 24px;
+//                     margin-bottom: 40px;
+//                 }
+
+//                 @include lg {
+//                     max-width: 500px;
+//                 }
+//             }
+
+//             .ctas {
+//                 display: flex;
+//                 // justify-content: center;
+//                 gap: 20px;
+
+//                 .banner-cta {
+//                     text-transform: uppercase;
+//                     font-size: 13px;
+//                     font-weight: 500;
+//                     // width: fit-content;
+//                     border: 2px solid black;
+//                     padding: 10px 20px;
+//                     cursor: pointer;
+
+//                     &.v2 {
+//                         color: black;
+//                     }
+
+//                     &:hover {
+//                         opacity: 0.6;
+//                     }
+//                 }
+//             }
+//         }
+
+//     }
+
+// }
